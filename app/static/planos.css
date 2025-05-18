@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #1008fe;
+    --secondary-color: #fe0808;
+    --accent-color: #fca311;
+    --light-color: #e6e6e6;
+    }    
+        
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+    }
+        
+.navbar {
+    background-color: var(--primary-color) !important;
+    }
+        
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    }
+        
+.btn-primary:hover {
+    background-color: #e59100;
+    border-color: #e59100;
+    }
+        
+.plan-card {
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: none;
+    overflow: hidden;
+    }
+        
+.plan-card:hover {
+    transform: translateY(-5px);
+    }
+        
+.plan-header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    }
+        
+.popular-plan {
+    border: 3px solid var(--accent-color);
+    position: relative;
+    }
+        
+.popular-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    }
+        
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+    }
+        
+.feature-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    }
+        
+.feature-list li:last-child {
+    border-bottom: none;
+    }
+        
+.feature-list li i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    }
+        
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    }
