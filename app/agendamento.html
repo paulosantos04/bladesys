@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviço - BladeSys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Inter', sans-serif; /* Alterada para Inter */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff; /* Fundo branco padrão */
+        }
+
+        .container {
+            max-width: 100%; /* Limita a largura máxima da página */
+            margin: 20px; /* Centraliza o conteúdo */
+            padding: 0 40px; /* Espaçamento lateral */
+        }
+
+        /* Cabeçalho */
+        .header {
+            padding: 15px 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between; /* BladeSys à esquerda, menu à direita */
+            align-items: center;
+        }
+
+        .header .brand-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            flex-shrink: 0; /* Impede que ele seja comprimido */
+        }
+
+        .header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Espaçamento entre os itens */
+        }
+
+
+        .header nav ul li {
+            margin-left: 20px;
+        }
+
+        .header nav ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            padding: 5px 10px;
+        }
+
+        .header nav ul li a.login-button {
+            background-color: rgba(4, 0, 255, 1);
+            color: white;
+            border-radius: 5px;
+            padding: 12px 18px;
+            font-size: 16px;
+        }
+
+        .header nav ul li a.login-button:hover {
+            background-color: rgba(4, 0, 200, 1);
+        }
+
+        /* Conteúdo Principal */
+        .main-content {
+            padding: 1%;
+        }
+        
+        /* O .container dentro do .main-content herdará as novas margens */
+
+        .main-title {
+            font-size: 74px;
+            color: rgba(255, 2, 2, 1);
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: black;
+            margin-bottom: 40px;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        /* Formulário */
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 18px;
+            color: black;
+            margin-bottom: 8px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="date"], /* Mantendo caso use no futuro */
+        .form-group input[type="time"]  /* Mantendo caso use no futuro */
+         {
+            width: 42%; /* Reduzido à metade */
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .form-group input[type="text"]::placeholder {
+            color: #888;
+            font-style: italic;
+        }
+
+        .agendar-button {
+            background-color: rgba(255, 0, 0, 1);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px; /* Padding ajustado para melhor visual com width fixo */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 42%; /* Mesmo tamanho dos campos */
+            box-sizing: border-box; /* Importante para consistência de tamanho */
+            display: block; /* Para ocupar a largura definida e alinhar à esquerda */
+            text-align: center; /* Para centralizar o texto dentro do botão */
+            margin-top: 10px; /* Pequeno espaço acima do botão */
+        }
+
+        .agendar-button:hover {
+            background-color: rgba(200, 0, 0, 1);
+        }
+
+        /* Rodapé com Redes Sociais */
+        .social-footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            text-align: 35%; /* Mantém os ícones/links centralizados no rodapé */
+        }
+        /* O .container dentro do .social-footer herdará as novas margens,
+           mas o text-align: center; dentro dele ainda centralizará os links em relação ao bloco do container. */
+
+        .social-footer a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .social-footer a:hover {
+            color: rgba(4, 0, 255, 1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="brand-name">BladeSys</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#agendamento">Agendamento</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#profissionais">Profissionais</a></li>
+                    <li><a href="#login" class="login-button">Login/Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="main-title">Agende seu serviço!</h1>
+            <p class="subtitle">Aqui você pode realizar o agendamento do serviço que você necessita.</p>
+
+            <section class="form-section">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="servico">Serviço</label>
+                        <input type="text" id="servico" name="servico" placeholder="Lista dos serviços disponíveis">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input type="text" id="data" name="data" placeholder="Datas Disponíveis">
+                        </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horário</label>
+                        <input type="text" id="horario" name="horario" placeholder="Horários Disponíveis">
+                        </div>
+
+                    <button type="submit" class="agendar-button">Agendar</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="social-footer">
+        <div class="container">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">YouTube</a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
