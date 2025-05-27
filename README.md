@@ -47,7 +47,7 @@ Projeto de desenvolvimento web utilizando Python com foco na biblioteca Flask pa
 
 ## 📦 Estrutura do Projeto
 
-```
+
 bladesys/
 ├── app/                  # Aplicação principal
 │   ├── templates/        # Templates Jinja2
@@ -58,15 +58,14 @@ bladesys/
 ├── tests/                # Testes automatizados
 ├── migrations/           # Migrações de banco de dados
 ├── config.py             # Configurações
-└── requirements.txt      # Dependências
-```
+└── requirements.txt      # Dependências-->
 
 ## 🎨 Design UI/UX
 
 Acesse o protótipo completo no Figma:
 [Figma Design](https://www.figma.com/design/dXEOQgqVNzz6SRF0Fcto6z/BladeSys?node-id=3-777&t=LUIyxYHyTVuz7CIA-0)
 
-## 🤝 Como Contribuir
+<!--## 🤝 Como Contribuir
 
 1. Faça um fork do projeto
 2. Crie sua branch (`git checkout -b feature/nova-feature`)
