@@ -1,0 +1,26 @@
+/*Estilização Padrão {tags que são as mesmas em todos os arquivos}*/
+:root {
+    --primary-color: #1008fe; /*cor primária*/
+    --secondary-color: #fe0808; /*cor secundária*/
+    --accent-color: #fca311; /*cor destaque*/
+    --light-color: #e6e6e6; /*cor de "luz"*/
+    }  
+
+/*Estilos Gerais Tag Body*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*fonte padrão falbacks*/
+    background-color: #f8f9fa; /*cor de fundo do body*/
+    color: var(--primary-color); /* cor do texto = cor primária do site*/
+    }
+
+/*Estilos da Barra de Navegação*/
+.navbar {
+    background-color: var(--primary-color) !important; /*cor de fundo = cor primária do site, !important - estilo se sobrepõe sobre outros possíveis estilos*/
+    }
+
+
+/*Efeitos Rodapé*/
+footer { /*cor de fundo = primária, texto de cor branca*/
+    background-color: var(--primary-color);
+    color: white;
+    }
