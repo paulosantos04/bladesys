@@ -14,10 +14,6 @@ def planos(): #Função para página de planos
 def agenda(): #Função para página de agendamento
     return render_template("agendamento.html") #Retorno da função agenda, retorna HTML da página de agendamento
 
-@app.route("/cadastro") #Define rota para página de cadastro
-def cadastro(): #Função para página de cadastro
-    return render_template("cadastro.html") #Retorno da função cadastro, retorna HTML da página de cadastro
-
 #@app.route("/login") #Define rota para página de login
 #def login(): #Função para página de login
     #return render_template("login.html") #Retorno da função login, retorna HTML da página de login
