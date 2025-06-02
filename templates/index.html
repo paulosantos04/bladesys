@@ -26,19 +26,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Início</a>
+                    <a class="nav-link active" href="{{url_for('index')}}"><i class="fas fa-home me-1"></i> Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="agendamento.html"><i class="far fa-calendar-alt me-1"></i> Agendamento</a>
+                    <a class="nav-link" href="{{url_for('agenda')}}"><i class="far fa-calendar-alt me-1"></i> Agendamento</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="planos.html"><i class="fas fa-star me-1"></i> Planos</a>
+                    <a class="nav-link" href="{{url_for('planos')}}"><i class="fas fa-star me-1"></i> Planos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profissionais.html"><i class="fas fa-users me-1"></i> Profissionais</a>
+                    <a class="nav-link" href="{{url_for('profissionais')}}"><i class="fas fa-users me-1"></i> Profissionais</a>
                 </li>
                 <li class="nav-item ms-2">
-                    <a class="btn btn-outline-light" href="login.html">
+                    <a class="btn btn-outline-light" href="{{url_for('login')}}">
                         <i class="fas fa-user me-1"></i> Login/Cadastro
                     </a>
                 </li>
@@ -67,7 +67,7 @@
                 <div class="plan-card warning">
                     <h2 class="h5 mb-3">Seu plano</h2>
                     <p class="text-muted mb-4">Você ainda não assinou um plano. Continue e aproveite os benefícios.</p>
-                    <a href="#plans" class="btn btn-primary">Contrate um plano</a>
+                    <a href="{{url_for('planos')}}" class="btn btn-primary">Contrate um plano</a>
                 </div>
             </div>
             
